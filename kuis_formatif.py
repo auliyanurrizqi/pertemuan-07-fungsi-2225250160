@@ -1,116 +1,61 @@
 
-# KUIS FORMATIF PERTEMUAN 07
-# Materi: Fungsi, Parameter, Return Value, dan Scope Python
+# KUIS FORMATIF: FUNGSI DALAM PYTHON
 
-soal = [
-    {
-        "pertanyaan": "1. Apa fungsi kata kunci def dalam Python?",
-        "pilihan": [
-            "A. Menghapus variabel",
-            "B. Mendefinisikan fungsi",
-            "C. Mengulang program",
-            "D. Menampilkan gambar"
-        ],
-        "jawaban": "B",
-        "pembahasan": "def digunakan untuk mendefinisikan atau membuat fungsi."
-    },
-    {
-        "pertanyaan": "2. Apa perbedaan parameter dan argumen?",
-        "pilihan": [
-            "A. Parameter adalah nilai, argumen adalah nama fungsi",
-            "B. Keduanya selalu sama",
-            "C. Parameter menerima data, argumen adalah nilai yang dikirim",
-            "D. Parameter hanya digunakan untuk print"
-        ],
-        "jawaban": "C",
-        "pembahasan": "Parameter ditulis dalam definisi fungsi, sedangkan argumen diberikan saat fungsi dipanggil."
-    },
-    {
-        "pertanyaan": "3. Kapan return lebih tepat daripada print?",
-        "pilihan": [
-            "A. Saat hasil fungsi perlu digunakan kembali",
-            "B. Saat ingin menghapus fungsi",
-            "C. Saat ingin menghentikan komputer",
-            "D. Saat ingin membuat komentar"
-        ],
-        "jawaban": "A",
-        "pembahasan": "return mengembalikan nilai agar dapat disimpan atau digunakan dalam perhitungan lain."
-    },
-    {
-        "pertanyaan": "4. Berapakah hasil dari kuadrat(4) jika fungsi mengembalikan x * x?",
-        "pilihan": [
-            "A. 8",
-            "B. 12",
-            "C. 14",
-            "D. 16"
-        ],
-        "jawaban": "D",
-        "pembahasan": "Hasilnya 4 * 4 = 16."
-    },
-    {
-        "pertanyaan": "5. Mengapa variabel lokal berguna dalam fungsi?",
-        "pilihan": [
-            "A. Agar semua variabel menjadi global",
-            "B. Agar penggunaan variabel terbatas pada fungsi",
-            "C. Agar program tidak memerlukan parameter",
-            "D. Agar semua hasil otomatis dicetak"
-        ],
-        "jawaban": "B",
-        "pembahasan": "Variabel lokal membatasi penggunaan nama variabel pada ruang lingkup fungsi."
-    },
-    {
-        "pertanyaan": "6. Apa yang terjadi jika fungsi membutuhkan dua argumen wajib tetapi hanya diberi satu?",
-        "pilihan": [
-            "A. Program selalu menghasilkan nol",
-            "B. Fungsi otomatis menambah argumen",
-            "C. Python menghasilkan TypeError",
-            "D. Python menghapus fungsi"
-        ],
-        "jawaban": "C",
-        "pembahasan": "Jumlah argumen tidak memenuhi parameter wajib sehingga Python menghasilkan TypeError."
-    },
-    {
-        "pertanyaan": "7. Apa output dari kode berikut?\ndef tambah(a, b):\n    return a + b\n\nprint(tambah(3, 5) * 2)",
-        "pilihan": [
-            "A. 8",
-            "B. 10",
-            "C. 13",
-            "D. 16"
-        ],
-        "jawaban": "D",
-        "pembahasan": "tambah(3, 5) menghasilkan 8, kemudian 8 dikalikan 2 menjadi 16."
-    },
-    {
-        "pertanyaan": "8. Apa perbedaan Step Into dan Step Over di VS Code?",
-        "pilihan": [
-            "A. Step Into masuk ke fungsi, Step Over menjalankan satu baris tanpa menelusuri isi fungsi",
-            "B. Step Into menghapus kode, Step Over menyimpan kode",
-            "C. Step Into untuk GitHub, Step Over untuk Python",
-            "D. Keduanya digunakan hanya untuk mencetak hasil"
-        ],
-        "jawaban": "A",
-        "pembahasan": "Step Into menelusuri isi fungsi, sedangkan Step Over melewati penelusuran baris internal fungsi."
-    },
-    {
-        "pertanyaan": "9. Mengapa modularisasi membantu pengujian program?",
-        "pilihan": [
-            "A. Karena semua kode digabung menjadi satu baris",
-            "B. Karena program tidak membutuhkan input",
-            "C. Karena setiap fungsi dapat diuji secara terpisah",
-            "D. Karena kesalahan tidak mungkin terjadi"
-        ],
-        "jawaban": "C",
-        "pembahasan": "Fungsi dengan tugas yang jelas memudahkan pengujian dan pencarian kesalahan."
-    },
-    {
-        "pertanyaan": "10. Perintah Git apa yang mengirim commit lokal ke GitHub setelah remote terhubung?",
-        "pilihan": [
-            "A. git init",
-            "B. git push",
-            "C. git add",
-            "D. git status"
-        ],
-        "jawaban": "B",
-        "pembahasan": "git push mengirim commit lokal ke repositori remote seperti GitHub."
-    }
-]
+# 1. Fungsi kata kunci def
+print("1. Kata kunci def digunakan untuk mendefinisikan atau membuat fungsi dalam Python.")
+print()
+
+# 2. Perbedaan parameter dan argumen
+def tambah(a, b):
+    return a + b
+
+print("2. Parameter adalah variabel dalam definisi fungsi,")
+print("   sedangkan argumen adalah nilai yang diberikan saat fungsi dipanggil.")
+print("   Contoh tambah(3, 5) =", tambah(3, 5))
+print()
+
+# 3. Perbedaan return dan print
+print("3. return digunakan untuk mengembalikan nilai dari fungsi,")
+print("   sedangkan print digunakan untuk menampilkan informasi ke layar.")
+print()
+
+# 4. Nilai variabel x pada fungsi kuadrat
+def kuadrat(x):
+    return x * x
+
+x = kuadrat(4)
+print("4. Nilai x =", x)
+print()
+
+# 5. Variabel lokal
+print("5. Variabel lokal membatasi penggunaan data dalam fungsi,")
+print("   mengurangi risiko perubahan yang tidak diinginkan,")
+print("   serta memudahkan pengujian dan perbaikan program.")
+print()
+
+# 6. Fungsi dengan argumen yang kurang
+print("6. Jika fungsi membutuhkan dua argumen tetapi hanya diberi satu,")
+print("   Python menghasilkan TypeError.")
+
+# Contoh kesalahan (tidak dijalankan):
+# print(tambah(5))
+print()
+
+# 7. Menggunakan return dalam perhitungan lain
+hasil = kuadrat(3) + kuadrat(4)
+print("7. Hasil kuadrat(3) + kuadrat(4) =", hasil)
+print()
+
+# 8. Perbedaan Step Into dan Step Over
+print("8. Step Into digunakan untuk masuk ke dalam fungsi saat debugging.")
+print("   Step Over menjalankan satu baris tanpa menelusuri isi fungsi.")
+print()
+
+# 9. Manfaat modularisasi
+print("9. Modularisasi memudahkan pengujian fungsi secara terpisah,")
+print("   sehingga kesalahan lebih mudah ditemukan dan diperbaiki.")
+print()
+
+# 10. Perintah Git untuk mengirim commit ke GitHub
+print("10. Perintah Git untuk mengirim commit lokal ke GitHub adalah:")
+print("    git push")
